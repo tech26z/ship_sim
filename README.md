@@ -1,2 +1,2 @@
-# marine_engineering
-marine diesel engine and control system simulation
+# ship simulator
+compliete simulate a real commercial ship

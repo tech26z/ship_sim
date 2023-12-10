@@ -1,14 +1,21 @@
-﻿using System.Collections;
+﻿//************************************************************
+//this is a rudder wheel script for control the wheel        *
+//the max limt is two turns on both sides                    *
+//finished on 2023-12-10                                     *
+//by tech26z                                                 *
+//************************************************************
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WheelController : MonoBehaviour {
 
-    float ho;
-    float speed = 70.0f;
-    Quaternion currentRotation;
-    Quaternion lastRotation;
-    float rotationCount;
+    float ho;                       //controlled by key arrow key, left/right
+    float speed = 70.0f;            //control the wheel angular speed
+    Quaternion currentRotation;     //position of the wheel
+    Quaternion lastRotation;        //same as above 
+    float rotationCount;            //total wheel turning angle
 
 
     // Use this for initialization
@@ -22,37 +29,12 @@ public class WheelController : MonoBehaviour {
 
         ho = Input.GetAxis("Horizontal");      
         Quaternion currentRotation = transform.rotation;
-        float rotationChange = Mathf.Abs(Quaternion.Angle(lastRotation, currentRotation));
+        //find the absolute difference, if you remove the Mathf.Abs, you get the same result
+        float rotationChange = Mathf.Abs(Quaternion.Angle(lastRotation, currentRotation)); 
 
-        //这里的问题是，ho在从-1向正1过渡的时候，有一个短暂的时间还是在正的-0.0x的位置上，
-        //所以负数的角度还在增加，直到ho变为正值，程序才会转换if block。用Mathf.FloorToInt()
-        //问题依旧
-        /*
-        if (ho < 0 && rotationCount < 540)
-        {
-            transform.Rotate(Vector3.forward, -speed * Time.deltaTime * ho);
-
-            rotationCount += rotationChange;
-            lastRotation = currentRotation;
-            Debug.Log(rotationCount - 180);
-        }
-        else if (ho > 0 && rotationCount > -540)
-        {
-            transform.Rotate(Vector3.forward, -speed * Time.deltaTime * ho);
-            
-            rotationCount -= rotationChange;
-            lastRotation = currentRotation;
-            Debug.Log(rotationCount - 180);
-        }
-        else
-        {
-            
-        }
-        */
-        //下面这段对了。为什么对，也不清楚，反正能正负旋转720°了！
-        //左右各转两圈限位
         if (ho < 0 && rotationCount < 900)
         {
+            //turning the wheel by keyboard, this part limit the max port turning to 720°，two revs
             transform.Rotate(Vector3.forward, -speed * Time.deltaTime * ho);
 
             rotationCount += rotationChange;
@@ -61,6 +43,7 @@ public class WheelController : MonoBehaviour {
         }
         else if (ho > 0 && rotationCount > -540)
         {
+            //same as above but limit the max of starboard turn
             transform.Rotate(Vector3.forward, -speed * Time.deltaTime * ho);
 
             rotationCount -= rotationChange;

@@ -29,6 +29,7 @@ public class WheelController : MonoBehaviour {
 
         ho = Input.GetAxis("Horizontal");      
         Quaternion currentRotation = transform.rotation;
+		
         //find the absolute difference, if you remove the Mathf.Abs, you get the same result
         float rotationChange = Mathf.Abs(Quaternion.Angle(lastRotation, currentRotation)); 
 

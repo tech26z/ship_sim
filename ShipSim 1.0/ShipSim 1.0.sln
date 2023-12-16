@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipSim 1.0", "ShipSim 1.0.csproj", "{9627012C-8D42-3C20-9887-625C46DAC429}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipSim 1.0.Plugins", "ShipSim 1.0.Plugins.csproj", "{02EA7E99-8085-F10F-AAC5-ACFAA496B447}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipSim 1.0", "ShipSim 1.0.csproj", "{9627012C-8D42-3C20-9887-625C46DAC429}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipSim 1.0.Editor.Plugins", "ShipSim 1.0.Editor.Plugins.csproj", "{27225EA9-0540-5F8D-95AA-CDDC64CC513F}"
 EndProject
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9627012C-8D42-3C20-9887-625C46DAC429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9627012C-8D42-3C20-9887-625C46DAC429}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9627012C-8D42-3C20-9887-625C46DAC429}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9627012C-8D42-3C20-9887-625C46DAC429}.Release|Any CPU.Build.0 = Release|Any CPU
 		{02EA7E99-8085-F10F-AAC5-ACFAA496B447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{02EA7E99-8085-F10F-AAC5-ACFAA496B447}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02EA7E99-8085-F10F-AAC5-ACFAA496B447}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02EA7E99-8085-F10F-AAC5-ACFAA496B447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9627012C-8D42-3C20-9887-625C46DAC429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9627012C-8D42-3C20-9887-625C46DAC429}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9627012C-8D42-3C20-9887-625C46DAC429}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9627012C-8D42-3C20-9887-625C46DAC429}.Release|Any CPU.Build.0 = Release|Any CPU
 		{27225EA9-0540-5F8D-95AA-CDDC64CC513F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{27225EA9-0540-5F8D-95AA-CDDC64CC513F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27225EA9-0540-5F8D-95AA-CDDC64CC513F}.Release|Any CPU.ActiveCfg = Release|Any CPU
